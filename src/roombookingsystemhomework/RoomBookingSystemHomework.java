@@ -9,6 +9,7 @@ public class RoomBookingSystemHomework {
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         EmailVerification();
+        RequestResources();
     }
     
     public static void EmailVerification(){
@@ -26,6 +27,16 @@ public class RoomBookingSystemHomework {
         }
         if (emailVerified == true){
             System.out.println("Booking succesful ");
+        }
+
+    }
+    public static void RequestResources(){
+        System.out.println("Would you like any extra recourses? E.g. a projector, pens, whiteboard, or some paper");
+        String choice = input.nextLine();
+        if (choice.equals("yes")) {
+            System.out.println("What resources would you like?");
+            String requestedResources = input.nextLine();
+            System.out.println(requestedResources + " will be put in to your selected room");
         }
 
     }
