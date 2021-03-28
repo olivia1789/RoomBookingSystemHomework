@@ -8,8 +8,35 @@ public class RoomBookingSystemHomework {
 
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
+        
+        System.out.println("Welcome to Book A Room  ");
+        while (true) {
+            System.out.println("What would you like to do next");
+            System.out.println("1- Book a room");
+            System.out.println("2- View catering schedule");
+            System.out.println("3- View cleaner schedule");
+            
+
+            System.out.println("0- Exit");
+            int userChoice = input.nextInt();
+
+            switch (userChoice) {
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;               
+                case 0:
+                    
+                    System.exit(0);
+            }
         EmailVerification();
         RequestResources();
+    }
     }
     
     public static void EmailVerification(){
