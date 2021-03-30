@@ -9,12 +9,13 @@ public class RoomBookingSystemHomework {
 
     public static Scanner input = new Scanner(System.in);
     private static ArrayList<BookingObjects> bookingSchedule = new ArrayList<>();
-    private static ArrayList<BookingObjects> refreshmentSchedule = new ArrayList<>();
+    private static ArrayList<refreshmentObjects> refreshmentSchedule = new ArrayList<>();
+    
     public static void main(String[] args) {
         
         System.out.println("Welcome to Book A Room there are 5 different rooms to choose from ");
         while (true) {
-            System.out.println("What would you like to do next");
+            System.out.println("\n\nWhat would you like to do next");
             System.out.println("1- View details about rooms and refreshments ");
             System.out.println("2- Book a room");
             System.out.println("3- Book refreshments");
@@ -28,13 +29,14 @@ public class RoomBookingSystemHomework {
 
             switch (userChoice) {
                 case 1:
-                    Details();
+                    RoomDetails();
+                    RefreshmentDetails();
                     break;
                 case 2:
                     BookRoom();
                     break;
                 case 3:
-                    
+                    BookRefreshments();
                     break;
                 case 4:
                     viewBookingSchedule();
@@ -53,19 +55,23 @@ public class RoomBookingSystemHomework {
 //        RequestResources();
     }
     }
-    public static void Details(){
-        System.out.println("We have 5 different rooms "
+    
+    public static void RoomDetails(){
+        System.out.println("\n\nWe have 5 different rooms "
                 + "\nRoom 1 which accommodates 2 people"
                 + "\nRoom 2 which accommodates 4 people"
                 + "\nRoom 3 which accommodates 8 people"
                 + "\nRoom 4 which accommodates 15 people and has wheelchair access"
                 + "\nRoom 5 which accommodates 50 people ");
-        System.out.println("We offer a wide range of refreshment options"
+    }
+    public static void RefreshmentDetails(){
+        System.out.println("\nWe offer a wide range of refreshment options"
                 + "\nDRINKS: Water, Tea, Coffee and Hot Chocalate"
                 + "\nFOOD: Pastry Selection, Sandwidch Selection, Cheese Board, Fruit Board and Chocolate Board ");
     }
+    
     public static void BookRoom(){
-        System.out.println("Please enter what room you would like to book e.g room 2");
+        System.out.println("\nPlease enter what room you would like to book e.g room 2");
         input.nextLine();
         String room = input.nextLine();
         System.out.println("Please enter the date you want to book the room for e.g 5/6/2020");
@@ -75,6 +81,7 @@ public class RoomBookingSystemHomework {
         //input.nextLine();
         String time = input.nextLine();
         
+        RequestResources();
         EmailVerification();
                 
         BookingObjects userBooking = new BookingObjects(room,date,time);
@@ -83,11 +90,12 @@ public class RoomBookingSystemHomework {
         System.out.println(userBooking.toString());
     
     }
+    
     public static void viewBookingSchedule(){
         //print the room bookings 
         
         if(bookingSchedule.isEmpty()){
-            System.out.println("There are currently no rooms booked");
+            System.out.println("\nThere are currently no rooms booked");
         }
         else{
             for (int i = 0; i < bookingSchedule.size(); i++) {
@@ -96,6 +104,7 @@ public class RoomBookingSystemHomework {
             }
         }
     }
+    
     public static void EmailVerification(){
         boolean emailVerified = false;
         while (emailVerified == false) {
@@ -114,6 +123,7 @@ public class RoomBookingSystemHomework {
         }
 
     }
+    
     public static void RequestResources(){
         System.out.println("Would you like any extra recourses? E.g. a projector, pens, whiteboard, or some paper");
         String choice = input.nextLine();
@@ -124,5 +134,28 @@ public class RoomBookingSystemHomework {
         }
 
     }
+    
+    public static void BookRefreshments(){
+        System.out.println("Would you like a reminder of our refreshment options?");
+        input.nextLine();
+        String reminder = input.nextLine();
+        if (reminder.equals("yes")){
+            RefreshmentDetails();
+        }
+            System.out.println("What refreshments would you like?");
+        String refreshments = input.nextLine();
+        System.out.println("What time would you like the refreshments to arrive?");
+        String refreshmentTimings = input.nextLine();
+        System.out.println("What room would you like the refreshments to go to");
+        String refreshmentRoom = input.nextLine();
 
+        EmailVerification();
+
+        refreshmentObjects refreshmentOrder = new refreshmentObjects(refreshments, refreshmentTimings, refreshmentRoom);
+        refreshmentSchedule.add(refreshmentOrder);
+
+        System.out.println(refreshmentOrder.toString());
+
+    
+}
 }
