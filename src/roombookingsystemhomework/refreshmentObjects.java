@@ -6,17 +6,21 @@ public class refreshmentObjects {
     private String refreshments;
     private String refreshmentTimings;
     private String refreshmentRoom;
+    private String refreshmentDate;
 
-    public refreshmentObjects(String refreshments, String refreshmentTimings, String refreshmentRoom) {
+    public refreshmentObjects(String refreshments, String refreshmentTimings, String refreshmentRoom, String refreshmentDate) {
         this.refreshments = refreshments;
         this.refreshmentTimings = refreshmentTimings;
         this.refreshmentRoom = refreshmentRoom;
+        this.refreshmentDate = refreshmentDate;
     }
 
     @Override
     public String toString() {
-        return  "refreshments = " + refreshments + ", refreshmentTimings = " + refreshmentTimings + ", refreshmentRoom = " + refreshmentRoom + '}';
+        return "" + "refreshments =" + refreshments + ", refreshmentTimings=" + refreshmentTimings + ", refreshmentRoom=" + refreshmentRoom + ", refreshmentDate=" + refreshmentDate + '}';
     }
+
+    
 
     public String getRefreshments() {
         return refreshments;
@@ -41,6 +45,15 @@ public class refreshmentObjects {
     public void setRefreshmentRoom(String refreshmentRoom) {
         this.refreshmentRoom = refreshmentRoom;
     }
+
+    public String getRefreshmentDate() {
+        return refreshmentDate;
+    }
+
+    public void setRefreshmentDate(String refreshmentDate) {
+        this.refreshmentDate = refreshmentDate;
+    }
+    
     
     
 }
