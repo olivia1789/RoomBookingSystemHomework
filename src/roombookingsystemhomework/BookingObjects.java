@@ -7,8 +7,7 @@ public class BookingObjects {
     private String room;
     private String date;
     private String time;
-    private String refreshments;
-    private String refreshmentTimings;
+    
 
     public BookingObjects(String room, String date, String time) {
         this.room = room;
@@ -21,10 +20,7 @@ public class BookingObjects {
         return "Booking is:" + "room = " + room + ", date = " + date + ", time = " + time ;
     }
 
-    public BookingObjects(String refreshments, String refreshmentTimings) {
-        this.refreshments = refreshments;
-        this.refreshmentTimings = refreshmentTimings;
-    }
+    
     
 
     public String getRoom() {
@@ -51,20 +47,5 @@ public class BookingObjects {
         this.time = time;
     }
 
-    public String getRefreshments() {
-        return refreshments;
-    }
-
-    public void setRefreshments(String refreshments) {
-        this.refreshments = refreshments;
-    }
-
-    public String getRefreshmentTimings() {
-        return refreshmentTimings;
-    }
-
-    public void setRefreshmentTimings(String refreshmentTimings) {
-        this.refreshmentTimings = refreshmentTimings;
-    }
     
 }
