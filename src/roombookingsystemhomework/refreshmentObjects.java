@@ -17,7 +17,7 @@ public class refreshmentObjects {
 
     @Override
     public String toString() {
-        return "" + "refreshments =" + refreshments + ", refreshmentTimings=" + refreshmentTimings + ", refreshmentRoom=" + refreshmentRoom + ", refreshmentDate=" + refreshmentDate + '}';
+        return "" + "Refreshments =" + refreshments + ", Date of refreshments arrivsl = " + refreshmentDate+ ", Time refreshment wanted = " + refreshmentTimings + ", Room = " + refreshmentRoom  + '}';
     }
 
     
