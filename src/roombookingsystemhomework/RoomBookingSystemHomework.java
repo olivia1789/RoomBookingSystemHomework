@@ -42,7 +42,7 @@ public class RoomBookingSystemHomework {
                     viewBookingSchedule();
                     break;
                 case 5:
-
+                    viewRefreshmentSchedule();
                     break;
                 case 6:
 
@@ -64,6 +64,7 @@ public class RoomBookingSystemHomework {
                 + "\nRoom 4 which accommodates 15 people and has wheelchair access"
                 + "\nRoom 5 which accommodates 50 people ");
     }
+    
     public static void RefreshmentDetails(){
         System.out.println("\nWe offer a wide range of refreshment options"
                 + "\nDRINKS: Water, Tea, Coffee and Hot Chocalate"
@@ -160,4 +161,18 @@ public class RoomBookingSystemHomework {
 
     
 }
+    
+    public static void viewRefreshmentSchedule(){
+        //print the room bookings 
+        
+        if(refreshmentSchedule.isEmpty()){
+            System.out.println("\nThere are currently no refreshments booked");
+        }
+        else{
+            for (int i = 0; i < refreshmentSchedule.size(); i++) {
+                System.out.println(refreshmentSchedule.get(i).toString());
+                
+            }
+        }
+    }
 }
