@@ -144,6 +144,8 @@ public class RoomBookingSystemHomework {
         }
             System.out.println("What refreshments would you like?");
         String refreshments = input.nextLine();
+        System.out.println("What is the date which you want the refreshments to arrive");
+        String refreshmentDate = input.nextLine();
         System.out.println("What time would you like the refreshments to arrive?");
         String refreshmentTimings = input.nextLine();
         System.out.println("What room would you like the refreshments to go to");
@@ -151,7 +153,7 @@ public class RoomBookingSystemHomework {
 
         EmailVerification();
 
-        refreshmentObjects refreshmentOrder = new refreshmentObjects(refreshments, refreshmentTimings, refreshmentRoom);
+        refreshmentObjects refreshmentOrder = new refreshmentObjects(refreshments, refreshmentTimings, refreshmentRoom, refreshmentDate );
         refreshmentSchedule.add(refreshmentOrder);
 
         System.out.println(refreshmentOrder.toString());
