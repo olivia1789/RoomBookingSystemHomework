@@ -75,7 +75,7 @@ public class RoomBookingSystemHomework {
         System.out.println("\nPlease enter what room you would like to book e.g room 2");
         input.nextLine();
         String room = input.nextLine();
-        System.out.println("Please enter the date you want to book the room for e.g 5/6/2020");
+        System.out.println("Please enter the date you want to book the room for e.g 05/06/2020");
         //input.nextLine();
         String date = input.nextLine();
         System.out.println("Please enter what time slots you would like to book e.g if you were wanting 5 to 8 pm enter 5pm 6pm 7pm");
@@ -136,20 +136,20 @@ public class RoomBookingSystemHomework {
 
     }
     
-    public static void BookRefreshments(){
+    public static void BookRefreshments() {
         System.out.println("Would you like a reminder of our refreshment options?");
         input.nextLine();
         String reminder = input.nextLine();
-        if (reminder.equals("yes")){
+        if (reminder.equals("yes")) {
             RefreshmentDetails();
         }
-            System.out.println("What refreshments would you like?");
+        System.out.println("What refreshments would you like?");
         String refreshments = input.nextLine();
-        System.out.println("What is the date which you want the refreshments to arrive");
+        System.out.println("What is the date which you want the refreshments to arrive e.g 04/06/2021");
         String refreshmentDate = input.nextLine();
-        System.out.println("What time would you like the refreshments to arrive?");
+        System.out.println("What time would you like the refreshments to arrive? e,g 7:30 ");
         String refreshmentTimings = input.nextLine();
-        System.out.println("What room would you like the refreshments to go to");
+        System.out.println("What room would you like the refreshments to go to? e.g room 4");
         String refreshmentRoom = input.nextLine();
 
         EmailVerification();
@@ -173,6 +173,14 @@ public class RoomBookingSystemHomework {
                 System.out.println(refreshmentSchedule.get(i).toString());
                 
             }
+        }
+    }
+    public static void noDoubleBookings(){
+        for (int i = 0; i < bookingSchedule.size(); i++) {
+                System.out.println(bookingSchedule.get(i).toString());
+                if (bookingSchedule.contains(room)){
+                    
+                }
         }
     }
 }
