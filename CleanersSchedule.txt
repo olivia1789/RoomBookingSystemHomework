@@ -1,0 +1,3 @@
+room will be clear at zjt, dirty room=jt}
+room will be clear at 6pm, dirty room=room 4}
+room will be clear at 57, dirty room=5}

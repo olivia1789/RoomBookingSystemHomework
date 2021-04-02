@@ -1,0 +1,5 @@
+Booking is:room = room 3, date = 06/dht, time = st
+Booking is:room = ydul, date = jt, time = jsy
+Booking is:room = jt, date = ztj, time = zjt
+Booking is:room = room 4, date = 07/08/2222, time = 5pm
+Booking is:room = 5, date = 6, time = 57
